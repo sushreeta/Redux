@@ -3,6 +3,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import {Provider} from 'react-redux'
+import {setFirstUser} from './actions/userAction'
 
 import configureStore from './store/configureStore'
 const store = configureStore()
@@ -13,6 +14,7 @@ store.subscribe(()=>{
      console.log(store.getState())
 })
 
+store.dispatch(setFirstUser())
 const ele = (
      <Provider store = {store}>
           <App/>
@@ -20,6 +22,3 @@ const ele = (
 )
 
 ReactDOM.render(ele,document.getElementById("root"))
-
-// Common js module loader- node and express
-// const express = require('Express')

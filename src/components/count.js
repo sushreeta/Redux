@@ -5,7 +5,7 @@ import Btn from './btn'
 function Count(props){
      return (
           <div>
-               <h2>count: value here</h2>
+               <h2>count: {props.count}</h2>
                <Btn/>
           </div>
      )
